@@ -36,43 +36,123 @@
                         <div class="name"> Solar Panel Monitoring </div>
                         <div class="row">
                             <div class="day-total-energy info-block"> 
-                                <h4>Day Total Energy</h4>
+                                <div class="total-energy-title">Day Total Energy</div>
+                                <div class="total-energy-value">
+                                    <h1>34.6</h1>
+                                    <h2>kWh</h2>
+                                </div>
                             </div>
 
                             <div class="temperature info-block">
-                                t
+                                <div class="column">
+                                    <h1>t°C</h1> 
+                                </div>
+                                <div class="column">
+                                    <h3>Panel:</h3>
+                                    <h3>Ambient:</h3>
+                                </div>
+                                <div class="column">
+                                    <h2>45°C</h2>
+                                    <h2>30°C</h2>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="energy-generation-rate info-block">
+                                <div class="current-generation-rate">
+                                    <div class="column">
+                                        <div class="current-generation-rate-title">Current Generation Rate</div>
+                                        <div class="current-generation-rate-value">
+                                            <h1>5.3</h1>
+                                            <h2>kW</h2>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="extrema-generation-rate">
+                                    <div class="column">
+                                        <h1>24h</h1> 
+                                    </div>
+                                    <div class="column">
+                                        <h3>Max:</h3>
+                                        <h3>Min:</h3>
+                                        <h3>Avg:</h3>
+                                    </div>
+                                    <div class="column">
+                                        <h2>6.8 kw</h2>
+                                        <h2>0.2 kW</h2>
+                                        <h2>6.8 kW</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row">   
-                            <div class="day-total-energy info-block"> 
-                                <h4>Day Total Energy</h4>
+                            <div class="performance-ratio info-block"> 
+                                <div class="performance-ratio-title">Performace Ratio</div>
+                                <div class="performance-ratio-value">87%</div>
                             </div>
 
-                            <div class="temperature info-block">
-                                t
+                            <div class="system-efficiency info-block"> 
+                                <div class="system-efficiency-title">System Efficiency</div>
+                                <div class="system-efficiency-value">18%</div>
                             </div>
                         </div>
                     </div>
         
                     <div class="monthly-generation category">
                         <div class="name"> Monthly Generation </div>
+                        <div class="dropdown">
+                            <select>
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november" selected>November</option>
+                                <option value="december">December</option>
+                            </select>
+                        </div>
+
+                        <div class="month-data">
+                            <div class="column">
+                                <h3>Total Energy Produce</h3>
+                                <h3>Peak Production Time</h3>
+                                <h3>Energy Savings</h3>
+                                <h3>Carbon Offset</h3>
+                                <h3>Avarage Daily Generation</h3>
+                                <h3>Number of Sunny Days</h3>
+                                <h3>Number of Cloudy Days</h3>
+                            </div>
+
+                            <div class="column">
+                                <h3>1050 kW</h3>
+                                <h3>12:30 PM</h3>
+                                <h3>315$</h3>
+                                <h3>700kg CO2</h3>
+                                <h3>35 kWh</h3>
+                                <h3>22</h3>
+                                <h3>8</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
     
                 <div class="bottom-row">
                     <div class="payback-period category">
-                        <div class="name"> Payback Period Remaining </div>
+                        <h2> Payback Period Remaining </h2>
+                        <h1>3.2 years</h1>
                     </div> 
     
-                    <div class="lifetime-energy category">
-                        <div class="name"> Lifetime Generated Energy </div>
+                    <div class="lifetime-generated-energy category">
+                        <h2> Lifetime Generated Energy </h2>
+                        <h1>5,180 kW</h1>
                     </div> 
                 </div>
         </section>

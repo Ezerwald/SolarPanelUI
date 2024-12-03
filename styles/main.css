@@ -1,9 +1,11 @@
 
 :root {
-    --color-1: #153d67; /* Main theme color */
-    --color-2: #36608c; /* Secondary theme color */
+    --color-1: #1b1b1b; /* Main theme color */
+    --color-2: #252525; /* Secondary theme color */
+    /* --color-3: #406aff; */
+    --color-3: #643d24;
     --text-1: white;
-    --text-2: grey;
+    --text-2: #646464;
 }
 
 *{
@@ -17,7 +19,7 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    background: linear-gradient(135deg, #457eb3, #003e7b);
+    background: linear-gradient(45deg, var(--color-1), var(--color-3));
     background-attachment: fixed;
 }
 
@@ -57,6 +59,7 @@
 
 .navigation ul li:hover{
     background-color: var(--color-2);
+    cursor: pointer;
 }
     
 .navigation ::before{
@@ -88,6 +91,7 @@
 
 .navigation button:hover{
     background-color: var(--color-2);
+    cursor: pointer;
 }
 
 .navigation .add::before{
@@ -106,7 +110,7 @@
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    background-color: var(--color-2);
+    background-color: var(--color-1);
 }
 
 .navigation .user-info .profile-picture{
@@ -169,11 +173,11 @@
     margin: 10px;
 }
 
-.row{
+.category .row{
     flex: 1;
     width: 100%;
     display: flex;
-    margin: 10px 0px;
+    padding: 10px 0px;
 }
 
 .category .info-block{
@@ -181,28 +185,278 @@
     min-height: 100px;
     background-color: var(--color-2);
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
     margin: 0px 10px;
+}
+
+.info-block .column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .overview .panel-monitoring{
     flex: 0.6;
 }
 
+/*--- Monitoring row - 1 ---*/
+
 .panel-monitoring .day-total-energy{
     flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-total-energy .total-energy-title{
+    font-size: 24px;
+    color: var(--text-2);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.day-total-energy .total-energy-value{
+    color: var(--text-1);
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+}
+
+.day-total-energy .total-energy-value h1{
+    font-size: 60px;
+}
+
+.day-total-energy .total-energy-value h2{
+    font-size: 30px;
+    font-weight: normal;
+    margin-left:10px;
 }
 
 .panel-monitoring .temperature{
     flex: 0.5;
+    display: flex;
+    color: var(--text-1)
 }
+
+.temperature .column{
+    gap: 30px;
+}
+
+.temperature h1{
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.temperature h2{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.temperature h3{
+    font-size: 28px;
+    color: var(--text-2);
+    font-weight: normal;
+}
+
+/*--- Monitoring row - 2 ---*/
 
 .panel-monitoring .energy-generation-rate{
     flex: 1;
+    display: flex;
+    justify-content: space-around;
 }
 
+.energy-generation-rate .column{
+    gap: 2px;
+}
 
+.energy-generation-rate .current-generation-rate{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-1);
+}
+
+.current-generation-rate .current-generation-rate-title{
+    font-size: 24px;
+    color: var(--text-2);
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.current-generation-rate .current-generation-rate-value{
+    color: var(--text-1);
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+}
+
+.current-generation-rate-value h1{
+    font-size: 60px;
+}
+
+.current-generation-rate-value h2{
+    font-size: 30px;
+    font-weight: normal;
+    margin-left:10px;
+}
+
+.energy-generation-rate .extrema-generation-rate{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-1);
+}
+
+.extrema-generation-rate h1{
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.extrema-generation-rate h2{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.extrema-generation-rate h3{
+    font-size: 28px;
+    color: var(--text-2);
+    font-weight: normal;
+}
+
+/*--- Monitoring row - 3 ---*/
+
+.panel-monitoring .performance-ratio{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.performance-ratio .performance-ratio-title{
+    font-size: 24px;
+    color: var(--text-2);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.performance-ratio .performance-ratio-value{
+    color: var(--text-1);
+    display: flex;
+    align-items: baseline;
+    font-size: 50px;
+}
+
+.panel-monitoring .system-efficiency{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.system-efficiency .system-efficiency-title{
+    font-size: 24px;
+    color: var(--text-2);
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.system-efficiency .system-efficiency-value{
+    color: var(--text-1);
+    display: flex;
+    align-items: baseline;
+    font-size: 50px;
+}
+
+/*--- Monthly Generation ---*/
 
 .overview .monthly-generation{
     flex: 0.4;
+    display: flex;
+    flex-direction: column;
 }
+
+.monthly-generation .dropdown{
+    flex: 0.1;
+    margin-bottom: 20px;
+}
+
+.monthly-generation .dropdown select {
+    width: auto;
+    appearance: none;
+    background-color: var(--color-2);
+    color: var(--text-2);
+    border: none;
+    border-radius: 15px; 
+    padding: 10px 10px 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown select option{    
+    text-align: left;
+}
+
+.dropdown select:focus {
+    outline: none;
+}
+
+.monthly-generation .month-data{
+    flex: 0.9;
+    color: var(--text-2);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.month-data .column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.month-data h3{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/*--- Bottom Row ---*/
+
+.overview .bottom-row{
+    display: flex;
+    width: 100%;
+}
+
+.bottom-row .payback-period{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottom-row .lifetime-generated-energy{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottom-row h2{
+    color: var(--text-2);
+
+}
+
+.bottom-row h1{
+    color: var(--text-1);
+    font-size: 40px;
+    font-weight: normal;
+}
+
